@@ -36,6 +36,7 @@ class LoginViewModel: LoginViewModelProtocol {
     }
     
     func login() {
+    
         self.loginService?.login(request: LoginRequest(userName: userName,
                                                        password: password,
                                                        userRole: "User"),
