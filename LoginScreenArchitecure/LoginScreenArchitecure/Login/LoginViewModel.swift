@@ -7,36 +7,59 @@
 
 import Foundation
 
-protocol LoginViewModelProtocol: class {
+//https://file-examples-com.github.io/uploads/2017/10/file_example_PNG_500kB.png
+
+protocol LoginViewDataBinding {
+    var userName: String? { get set }
+    var password: String? { get set }
+    var role: String? { get set }
+}
+
+protocol LoginViewActionBinding {
     func login()
 }
 
-class LoginViewModel: LoginViewModelProtocol {
-    var userName: String? {
-        didSet {
-            print("user name \(userName ?? "")")
-        }
-    }
-    var password: String? {
-        didSet {
-            print("password changed")
-            print("user name \(password ?? "")")
-        }
-    }
-    
+protocol LoginViewVaildationBinding {
+    var emailValidationAction: ((Bool) -> Void)? { get set }
+    var passwordValidationAction: ((Bool) -> Void)? { get set }
+    var roleValidationAction: ((Bool) -> Void)? { get set }
+}
+
+class LoginViewModel: LoginViewDataBinding, LoginViewVaildationBinding {
     weak var coordinator: LoginCoordinatorProtocol?
     
     private let session: SessionProtocol?
     private let loginService: LoginServiceProtocol?
+    
+    var userName: String? {
+        didSet {
+            emailValidationAction?(validateEmail(text: userName))
+        }
+    }
+    var password: String? {
+        didSet {
+            emailValidationAction?(validateEmail(text: password))
+        }
+    }
+    var role: String? {
+        didSet {
+            
+        }
+    }
+    
+    var emailValidationAction: ((Bool) -> Void)?
+    var passwordValidationAction: ((Bool) -> Void)?
+    var roleValidationAction: ((Bool) -> Void)?
     
     init(session: SessionProtocol = Session.shared,
          loginService: LoginServiceProtocol = LoginService()) {
         self.loginService = loginService
         self.session = session
     }
-    
+}
+
+extension LoginViewModel: LoginViewActionBinding {
     func login() {
-    
         self.loginService?.login(request: LoginRequest(userName: userName,
                                                        password: password,
                                                        userRole: "User"),
@@ -55,19 +78,4 @@ class LoginViewModel: LoginViewModelProtocol {
     }
 }
 
-protocol SessionProtocol {
-    func store(loginDetail: LoginData?)
-}
-
-class Session: SessionProtocol {
-    static let shared = Session()
-    private var accessToken: String?
-    
-    func store(loginDetail: LoginData?) {
-        guard let data = loginDetail else { return }
-        let lock = NSLock()
-        lock.lock()
-        accessToken = data.accessToken
-        lock.unlock()
-    }
-}
+extension LoginViewModel: LoginFieldValidator {}

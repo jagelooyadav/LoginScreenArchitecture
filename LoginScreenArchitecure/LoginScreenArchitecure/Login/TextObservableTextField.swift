@@ -9,8 +9,15 @@ import Foundation
 import UIKit
 
 class TextObservableTextField: UITextField {
-    
     var textDidChange: ((String?) -> Void)?
+    
+    enum Status {
+        case success
+        case fail
+        case normal
+    }
+    
+    var status: Status = .normal
     
     init() {
         super.init(frame: .zero)

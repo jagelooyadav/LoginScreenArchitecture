@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		163AA0E42723680C00238AF4 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AA0E32723680C00238AF4 /* Session.swift */; };
+		163AA0E92723684100238AF4 /* LoginFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AA0E82723684100238AF4 /* LoginFieldValidator.swift */; };
 		163AD9B62710252600D08BDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9B52710252600D08BDB /* LoginViewController.swift */; };
 		163AD9BC2710255700D08BDB /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9BB2710255700D08BDB /* LoginService.swift */; };
 		163AD9C4271025CF00D08BDB /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9C3271025CF00D08BDB /* LoginRequest.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		163AA0E32723680C00238AF4 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		163AA0E82723684100238AF4 /* LoginFieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFieldValidator.swift; sourceTree = "<group>"; };
 		163AD9B52710252600D08BDB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		163AD9BB2710255700D08BDB /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		163AD9C3271025CF00D08BDB /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				163AD9CD27102E6500D08BDB /* LoginViewModel.swift */,
 				163AD9D2271030AE00D08BDB /* LoginCoordinator.swift */,
 				163AD9DA2710D12900D08BDB /* TextObservableTextField.swift */,
+				163AA0E32723680C00238AF4 /* Session.swift */,
+				163AA0E82723684100238AF4 /* LoginFieldValidator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -294,10 +300,12 @@
 				163AD9BC2710255700D08BDB /* LoginService.swift in Sources */,
 				163AD9D3271030AE00D08BDB /* LoginCoordinator.swift in Sources */,
 				163CDC10270F593D00724514 /* AppDelegate.swift in Sources */,
+				163AA0E92723684100238AF4 /* LoginFieldValidator.swift in Sources */,
 				163CDC12270F593D00724514 /* SceneDelegate.swift in Sources */,
 				163AD9B62710252600D08BDB /* LoginViewController.swift in Sources */,
 				163AD9C4271025CF00D08BDB /* LoginRequest.swift in Sources */,
 				163AD9C92710264E00D08BDB /* LoginResponse.swift in Sources */,
+				163AA0E42723680C00238AF4 /* Session.swift in Sources */,
 				163CDC1A270F593D00724514 /* LoginScreenArchitecure.xcdatamodeld in Sources */,
 				163AD9CE27102E6500D08BDB /* LoginViewModel.swift in Sources */,
 				163AD9DB2710D12900D08BDB /* TextObservableTextField.swift in Sources */,

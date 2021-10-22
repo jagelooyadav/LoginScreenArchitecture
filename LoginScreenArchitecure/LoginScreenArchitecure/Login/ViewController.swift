@@ -13,14 +13,14 @@ class ViewController: UIViewController {
     @IBOutlet private weak var loginTextfield: TextObservableTextField!
     @IBOutlet private weak var passwordTextfield: TextObservableTextField!
     @IBOutlet private weak var scrollView: UIScrollView!
-    
-    private lazy var loginViewModel = LoginViewModel()
+    private lazy var loginViewModel: LoginFieldValidator
+        & LoginViewActionBinding
+        & LoginViewDataBinding
+        & LoginViewVaildationBinding = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-        print("scrollView.frame === \(scrollView.frame)")
-        print("scrollView.bounds === \(scrollView.bounds)")
     }
     
     @IBAction func login() {
@@ -31,8 +31,15 @@ class ViewController: UIViewController {
         self.loginTextfield.textDidChange = { [weak self] text in
             self?.loginViewModel.userName = text
         }
+        
         self.passwordTextfield.textDidChange = { [weak self] text in
-            self?.loginViewModel.password = text
+            self?.loginViewModel.userName = text
+        }
+        self.loginViewModel.emailValidationAction = { [weak self] isValid in
+            //Update email field UI
+        }
+        self.loginViewModel.passwordValidationAction = { [weak self] isValid in
+            //Update password field UI
         }
         self.loginTextfield.delegate = self
         self.passwordTextfield.delegate = self
