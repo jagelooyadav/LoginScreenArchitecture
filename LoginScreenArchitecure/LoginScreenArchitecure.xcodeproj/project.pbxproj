@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16302F8B2728683F00C16B71 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16302F8A2728683F00C16B71 /* APIClient.swift */; };
 		163AA0E42723680C00238AF4 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AA0E32723680C00238AF4 /* Session.swift */; };
 		163AA0E92723684100238AF4 /* LoginFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AA0E82723684100238AF4 /* LoginFieldValidator.swift */; };
 		163AD9B62710252600D08BDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9B52710252600D08BDB /* LoginViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16302F8A2728683F00C16B71 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		163AA0E32723680C00238AF4 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		163AA0E82723684100238AF4 /* LoginFieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFieldValidator.swift; sourceTree = "<group>"; };
 		163AD9B52710252600D08BDB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				163AD9DA2710D12900D08BDB /* TextObservableTextField.swift */,
 				163AA0E32723680C00238AF4 /* Session.swift */,
 				163AA0E82723684100238AF4 /* LoginFieldValidator.swift */,
+				16302F8A2728683F00C16B71 /* APIClient.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				163CDC14270F593D00724514 /* ViewController.swift in Sources */,
+				16302F8B2728683F00C16B71 /* APIClient.swift in Sources */,
 				163AD9BC2710255700D08BDB /* LoginService.swift in Sources */,
 				163AD9D3271030AE00D08BDB /* LoginCoordinator.swift in Sources */,
 				163CDC10270F593D00724514 /* AppDelegate.swift in Sources */,

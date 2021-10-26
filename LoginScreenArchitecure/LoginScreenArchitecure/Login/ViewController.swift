@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet private weak var loginTextfield: TextObservableTextField!
     @IBOutlet private weak var passwordTextfield: TextObservableTextField!
+    
     @IBOutlet private weak var scrollView: UIScrollView!
     private lazy var loginViewModel: LoginFieldValidator
         & LoginViewActionBinding
@@ -35,11 +36,11 @@ class ViewController: UIViewController {
         self.passwordTextfield.textDidChange = { [weak self] text in
             self?.loginViewModel.userName = text
         }
-        self.loginViewModel.emailValidationAction = { [weak self] isValid in
-            //Update email field UI
+        self.loginViewModel.emailValidationAction = { _ in
+            print("email is valid")
         }
-        self.loginViewModel.passwordValidationAction = { [weak self] isValid in
-            //Update password field UI
+        self.loginViewModel.passwordValidationAction = { _ in
+            print("password is valid")
         }
         self.loginTextfield.delegate = self
         self.passwordTextfield.delegate = self

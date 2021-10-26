@@ -17,14 +17,3 @@ struct User: Decodable {
     var firstName: String
     var lastName: String?
 }
-
-enum LoginError: Error {
-    case invalidResponse
-    
-    var errorDescription: String {
-        switch self {
-            case .invalidResponse:
-                return "Something went wrong"
-        }
-    }
-}
