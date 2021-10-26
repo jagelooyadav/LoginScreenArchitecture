@@ -22,6 +22,8 @@ struct LoginService: LoginServiceProtocol {
         self.apiClient.call(request: request) { (result: LoginResult) in
             if case let .success(data) = result {
                 print(data)
+            } else if case let .failure(error) = result {
+                print(error)
             }
         }
     }

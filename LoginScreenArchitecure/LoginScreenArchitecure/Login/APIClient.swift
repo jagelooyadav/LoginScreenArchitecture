@@ -25,7 +25,9 @@ class APIClient: APIClientProtocol {
         }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = networkConfig.method
-        urlRequest.httpBody = requestData
+        if networkConfig.method == "POST" {
+            urlRequest.httpBody = requestData
+        }
         URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
             guard let httpsResponse = response as? HTTPURLResponse,
                   httpsResponse.statusCode == 200,
@@ -56,9 +58,9 @@ extension NetworkConfigProtocol {
 }
 
 struct NetworkConfig: NetworkConfigProtocol {
-    var baseURL: String = "https://google.com"
+    var baseURL: String = "https://www.google.com/"
     var path: String?
-    var method: String = "POST"
+    var method: String = "GET"
 }
 
 enum APIError: Error {
