@@ -8,16 +8,12 @@
 import Foundation
 import UIKit
 
-protocol LoginCoordinatorProtocol: class {
+protocol LoginCoordinatorProtocol {
     func next()
 }
 
-class LoginCoordinator: LoginCoordinatorProtocol {
+class LoginCoordinator: Coordinator, LoginCoordinatorProtocol {
     func next() {
         print("next button")
-    }
-    
-    init(root: UINavigationController) {
-        
     }
 }

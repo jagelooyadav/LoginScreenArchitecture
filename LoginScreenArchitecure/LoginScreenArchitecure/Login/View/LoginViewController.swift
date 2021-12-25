@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 import Combine
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController, ObservableObject {
     
     @IBOutlet private weak var loginTextfield: TextObservableTextField!
     @IBOutlet private weak var passwordTextfield: TextObservableTextField!
@@ -44,7 +44,6 @@ class ViewController: UIViewController {
         loginViewModel.passwordValidationAction = { _ in
             print("password is valid")
         }
-        
         loginTextfield.delegate = self
         passwordTextfield.delegate = self
         addKeyboardObserver()
@@ -52,13 +51,13 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
     }
 }
 
-extension ViewController {
+extension LoginViewController {
     func addKeyboardObserver() {
         let notificationCentre = NotificationCenter.default
         notificationCentre.addObserver(self, selector: #selector(self.showKeyBoard(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -76,7 +75,7 @@ extension ViewController {
     }
 }
 
-extension ViewController: UIScrollViewDelegate {
+extension LoginViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
     }
 }

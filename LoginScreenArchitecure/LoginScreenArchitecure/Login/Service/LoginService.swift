@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol LoginServiceProtocol {
+public protocol LoginServiceProtocol {
     func login(request: LoginRequest, completion: ((Result<LoginData, Error>) -> Void)?)
 }
 

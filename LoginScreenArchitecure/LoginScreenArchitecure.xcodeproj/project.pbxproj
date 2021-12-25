@@ -10,7 +10,6 @@
 		16302F8B2728683F00C16B71 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16302F8A2728683F00C16B71 /* APIClient.swift */; };
 		163AA0E42723680C00238AF4 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AA0E32723680C00238AF4 /* Session.swift */; };
 		163AA0E92723684100238AF4 /* LoginFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AA0E82723684100238AF4 /* LoginFieldValidator.swift */; };
-		163AD9B62710252600D08BDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9B52710252600D08BDB /* LoginViewController.swift */; };
 		163AD9BC2710255700D08BDB /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9BB2710255700D08BDB /* LoginService.swift */; };
 		163AD9C4271025CF00D08BDB /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9C3271025CF00D08BDB /* LoginRequest.swift */; };
 		163AD9C92710264E00D08BDB /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9C82710264E00D08BDB /* LoginResponse.swift */; };
@@ -19,13 +18,14 @@
 		163AD9DB2710D12900D08BDB /* TextObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9DA2710D12900D08BDB /* TextObservableTextField.swift */; };
 		163CDC10270F593D00724514 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CDC0F270F593D00724514 /* AppDelegate.swift */; };
 		163CDC12270F593D00724514 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CDC11270F593D00724514 /* SceneDelegate.swift */; };
-		163CDC14270F593D00724514 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CDC13270F593D00724514 /* ViewController.swift */; };
+		163CDC14270F593D00724514 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CDC13270F593D00724514 /* LoginViewController.swift */; };
 		163CDC17270F593D00724514 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163CDC15270F593D00724514 /* Main.storyboard */; };
 		163CDC1A270F593D00724514 /* LoginScreenArchitecure.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 163CDC18270F593D00724514 /* LoginScreenArchitecure.xcdatamodeld */; };
 		163CDC1C270F593F00724514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163CDC1B270F593F00724514 /* Assets.xcassets */; };
 		163CDC1F270F593F00724514 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163CDC1D270F593F00724514 /* LaunchScreen.storyboard */; };
 		163CDC2A270F593F00724514 /* LoginScreenArchitecureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CDC29270F593F00724514 /* LoginScreenArchitecureTests.swift */; };
 		163CDC35270F593F00724514 /* LoginScreenArchitecureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CDC34270F593F00724514 /* LoginScreenArchitecureUITests.swift */; };
+		165326FE2777A8F40015EA5E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165326FD2777A8F40015EA5E /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,6 @@
 		16302F8A2728683F00C16B71 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		163AA0E32723680C00238AF4 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		163AA0E82723684100238AF4 /* LoginFieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFieldValidator.swift; sourceTree = "<group>"; };
-		163AD9B52710252600D08BDB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		163AD9BB2710255700D08BDB /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		163AD9C3271025CF00D08BDB /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		163AD9C82710264E00D08BDB /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -59,7 +58,7 @@
 		163CDC0C270F593D00724514 /* LoginScreenArchitecure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginScreenArchitecure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		163CDC0F270F593D00724514 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		163CDC11270F593D00724514 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		163CDC13270F593D00724514 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		163CDC13270F593D00724514 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		163CDC16270F593D00724514 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		163CDC19270F593D00724514 /* LoginScreenArchitecure.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoginScreenArchitecure.xcdatamodel; sourceTree = "<group>"; };
 		163CDC1B270F593F00724514 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		163CDC30270F593F00724514 /* LoginScreenArchitecureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginScreenArchitecureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		163CDC34270F593F00724514 /* LoginScreenArchitecureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenArchitecureUITests.swift; sourceTree = "<group>"; };
 		163CDC36270F593F00724514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		165326FD2777A8F40015EA5E /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,16 +101,11 @@
 		163AD9BA2710254400D08BDB /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				163CDC13270F593D00724514 /* ViewController.swift */,
-				163AD9BB2710255700D08BDB /* LoginService.swift */,
-				163AD9C3271025CF00D08BDB /* LoginRequest.swift */,
-				163AD9C82710264E00D08BDB /* LoginResponse.swift */,
-				163AD9CD27102E6500D08BDB /* LoginViewModel.swift */,
-				163AD9D2271030AE00D08BDB /* LoginCoordinator.swift */,
-				163AD9DA2710D12900D08BDB /* TextObservableTextField.swift */,
-				163AA0E32723680C00238AF4 /* Session.swift */,
-				163AA0E82723684100238AF4 /* LoginFieldValidator.swift */,
-				16302F8A2728683F00C16B71 /* APIClient.swift */,
+				165326F72777A68E0015EA5E /* Model */,
+				165326F62777A6750015EA5E /* View */,
+				165326F82777A7560015EA5E /* View Model */,
+				165326F92777A80F0015EA5E /* Service */,
+				165326FA2777A8660015EA5E /* Coordinator */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -146,7 +141,6 @@
 				163CDC1D270F593F00724514 /* LaunchScreen.storyboard */,
 				163CDC20270F593F00724514 /* Info.plist */,
 				163CDC18270F593D00724514 /* LoginScreenArchitecure.xcdatamodeld */,
-				163AD9B52710252600D08BDB /* LoginViewController.swift */,
 			);
 			path = LoginScreenArchitecure;
 			sourceTree = "<group>";
@@ -167,6 +161,52 @@
 				163CDC36270F593F00724514 /* Info.plist */,
 			);
 			path = LoginScreenArchitecureUITests;
+			sourceTree = "<group>";
+		};
+		165326F62777A6750015EA5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				163AD9DA2710D12900D08BDB /* TextObservableTextField.swift */,
+				163CDC13270F593D00724514 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		165326F72777A68E0015EA5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				163AA0E82723684100238AF4 /* LoginFieldValidator.swift */,
+				163AA0E32723680C00238AF4 /* Session.swift */,
+				163AD9C3271025CF00D08BDB /* LoginRequest.swift */,
+				163AD9C82710264E00D08BDB /* LoginResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		165326F82777A7560015EA5E /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				163AD9CD27102E6500D08BDB /* LoginViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		165326F92777A80F0015EA5E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				16302F8A2728683F00C16B71 /* APIClient.swift */,
+				163AD9BB2710255700D08BDB /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		165326FA2777A8660015EA5E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				165326FD2777A8F40015EA5E /* Coordinator.swift */,
+				163AD9D2271030AE00D08BDB /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,14 +339,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				163CDC14270F593D00724514 /* ViewController.swift in Sources */,
+				163CDC14270F593D00724514 /* LoginViewController.swift in Sources */,
 				16302F8B2728683F00C16B71 /* APIClient.swift in Sources */,
+				165326FE2777A8F40015EA5E /* Coordinator.swift in Sources */,
 				163AD9BC2710255700D08BDB /* LoginService.swift in Sources */,
 				163AD9D3271030AE00D08BDB /* LoginCoordinator.swift in Sources */,
 				163CDC10270F593D00724514 /* AppDelegate.swift in Sources */,
 				163AA0E92723684100238AF4 /* LoginFieldValidator.swift in Sources */,
 				163CDC12270F593D00724514 /* SceneDelegate.swift in Sources */,
-				163AD9B62710252600D08BDB /* LoginViewController.swift in Sources */,
 				163AD9C4271025CF00D08BDB /* LoginRequest.swift in Sources */,
 				163AD9C92710264E00D08BDB /* LoginResponse.swift in Sources */,
 				163AA0E42723680C00238AF4 /* Session.swift in Sources */,

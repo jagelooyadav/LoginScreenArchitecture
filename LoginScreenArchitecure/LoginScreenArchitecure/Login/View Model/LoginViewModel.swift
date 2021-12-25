@@ -25,23 +25,23 @@ protocol LoginViewVaildationBinding {
     var roleValidationAction: ((Bool) -> Void)? { get set }
 }
 
-class LoginViewModel: LoginViewDataBinding, LoginViewVaildationBinding {
-    weak var coordinator: LoginCoordinatorProtocol?
+class LoginViewModel: LoginViewDataBinding, LoginViewVaildationBinding, ObservableObject {
+    weak var coordinator: (LoginCoordinatorProtocol & AnyObject)?
     
     private let session: SessionProtocol?
     private let loginService: LoginServiceProtocol?
     
-    var userName: String? {
+    @Published var userName: String? {
         didSet {
             emailValidationAction?(validateEmail(text: userName))
         }
     }
-    var password: String? {
+    @Published var password: String? {
         didSet {
             emailValidationAction?(validateEmail(text: password))
         }
     }
-    var role: String? {
+    @Published var role: String? {
         didSet {
             
         }
