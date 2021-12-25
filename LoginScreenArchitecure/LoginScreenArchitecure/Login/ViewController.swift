@@ -7,17 +7,19 @@
 
 import UIKit
 import Foundation
+import Combine
 
 class ViewController: UIViewController {
     
     @IBOutlet private weak var loginTextfield: TextObservableTextField!
     @IBOutlet private weak var passwordTextfield: TextObservableTextField!
-    
+    private var cancellable = Set<AnyCancellable>()
     @IBOutlet private weak var scrollView: UIScrollView!
     private lazy var loginViewModel: LoginFieldValidator
-        & LoginViewActionBinding
-        & LoginViewDataBinding
-        & LoginViewVaildationBinding = LoginViewModel()
+    & LoginViewActionBinding
+    & LoginViewDataBinding
+    & LoginViewVaildationBinding
+    & AnyObject = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,23 +31,24 @@ class ViewController: UIViewController {
     }
     
     func setup() {
-        self.loginTextfield.textDidChange = { [weak self] text in
-            self?.loginViewModel.userName = text
-        }
+        loginTextfield.$string
+            .assign(to: \LoginViewModel.userName, on: loginViewModel as! LoginViewModel)
+            .store(in: &cancellable)
+        passwordTextfield.$string
+            .assign(to: \LoginViewModel.password, on: loginViewModel as! LoginViewModel)
+            .store(in: &cancellable)
         
-        self.passwordTextfield.textDidChange = { [weak self] text in
-            self?.loginViewModel.userName = text
-        }
-        self.loginViewModel.emailValidationAction = { _ in
+        loginViewModel.emailValidationAction = { _ in
             print("email is valid")
         }
-        self.loginViewModel.passwordValidationAction = { _ in
+        loginViewModel.passwordValidationAction = { _ in
             print("password is valid")
         }
-        self.loginTextfield.delegate = self
-        self.passwordTextfield.delegate = self
+        
+        loginTextfield.delegate = self
+        passwordTextfield.delegate = self
         addKeyboardObserver()
-        self.scrollView.delegate = self
+        scrollView.delegate = self
     }
 }
 
