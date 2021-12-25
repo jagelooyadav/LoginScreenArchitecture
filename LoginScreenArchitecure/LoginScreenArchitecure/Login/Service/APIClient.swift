@@ -11,6 +11,8 @@ protocol APIClientProtocol {
     func call<R: Encodable, T: Decodable>(request: R, completion: ((Result<T, Error>) -> Void)?)
 }
 
+/// This class would be out side the login module and might have at app level
+/// 
 class APIClient: APIClientProtocol {
     private let networkConfig: NetworkConfigProtocol
     init(networkConfig: NetworkConfigProtocol = NetworkConfig()) {
