@@ -58,9 +58,17 @@ extension UIControl {
 }
 
 extension UITextField {
-    var textPublisher: AnyPublisher<String, Never> {
+    var textChange: AnyPublisher<String, Never> {
         publisher(for: .editingChanged)
             .map { ($0 as? UITextField)?.text ?? "" }
+            .eraseToAnyPublisher()
+    }
+}
+
+extension UIButton {
+    var actionPublisher: AnyPublisher<UIButton, Never> {
+        publisher(for: .touchUpInside)
+            .map { $0 as? UIButton ?? UIButton() }
             .eraseToAnyPublisher()
     }
 }

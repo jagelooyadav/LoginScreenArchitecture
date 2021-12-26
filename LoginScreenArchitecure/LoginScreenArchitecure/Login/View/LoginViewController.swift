@@ -13,6 +13,8 @@ class LoginViewController: UIViewController, ObservableObject {
     
     @IBOutlet private weak var loginTextfield: UITextField!
     @IBOutlet private weak var passwordTextfield: UITextField!
+    @IBOutlet private weak var loginButton: UIButton!
+    
     private var cancellable = Set<AnyCancellable>()
     @IBOutlet private weak var scrollView: UIScrollView!
     private lazy var loginViewModel: LoginFieldValidator
@@ -24,6 +26,9 @@ class LoginViewController: UIViewController, ObservableObject {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+        loginButton.actionPublisher.sink { [weak self] _ in
+            self?.login()
+        }.store(in: &cancellable)
     }
     
     @IBAction func login() {
@@ -31,10 +36,10 @@ class LoginViewController: UIViewController, ObservableObject {
     }
     
     func setup() {
-        loginTextfield.textPublisher
+        loginTextfield.textChange
             .assign(to: \LoginViewModel.userName, on: loginViewModel as! LoginViewModel)
             .store(in: &cancellable)
-        passwordTextfield.textPublisher
+        passwordTextfield.textChange
             .assign(to: \LoginViewModel.password, on: loginViewModel as! LoginViewModel)
             .store(in: &cancellable)
         
