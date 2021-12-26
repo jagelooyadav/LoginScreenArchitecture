@@ -11,8 +11,8 @@ import Combine
 
 class LoginViewController: UIViewController, ObservableObject {
     
-    @IBOutlet private weak var loginTextfield: TextObservableTextField!
-    @IBOutlet private weak var passwordTextfield: TextObservableTextField!
+    @IBOutlet private weak var loginTextfield: UITextField!
+    @IBOutlet private weak var passwordTextfield: UITextField!
     private var cancellable = Set<AnyCancellable>()
     @IBOutlet private weak var scrollView: UIScrollView!
     private lazy var loginViewModel: LoginFieldValidator
@@ -31,10 +31,10 @@ class LoginViewController: UIViewController, ObservableObject {
     }
     
     func setup() {
-        loginTextfield.$string
+        loginTextfield.textPublisher
             .assign(to: \LoginViewModel.userName, on: loginViewModel as! LoginViewModel)
             .store(in: &cancellable)
-        passwordTextfield.$string
+        passwordTextfield.textPublisher
             .assign(to: \LoginViewModel.password, on: loginViewModel as! LoginViewModel)
             .store(in: &cancellable)
         

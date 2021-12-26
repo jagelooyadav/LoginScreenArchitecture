@@ -15,7 +15,7 @@
 		163AD9C92710264E00D08BDB /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9C82710264E00D08BDB /* LoginResponse.swift */; };
 		163AD9CE27102E6500D08BDB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9CD27102E6500D08BDB /* LoginViewModel.swift */; };
 		163AD9D3271030AE00D08BDB /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9D2271030AE00D08BDB /* LoginCoordinator.swift */; };
-		163AD9DB2710D12900D08BDB /* TextObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9DA2710D12900D08BDB /* TextObservableTextField.swift */; };
+		163AD9DB2710D12900D08BDB /* UITextField+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD9DA2710D12900D08BDB /* UITextField+Publisher.swift */; };
 		163CDC10270F593D00724514 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CDC0F270F593D00724514 /* AppDelegate.swift */; };
 		163CDC12270F593D00724514 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CDC11270F593D00724514 /* SceneDelegate.swift */; };
 		163CDC14270F593D00724514 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CDC13270F593D00724514 /* LoginViewController.swift */; };
@@ -54,7 +54,7 @@
 		163AD9C82710264E00D08BDB /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		163AD9CD27102E6500D08BDB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		163AD9D2271030AE00D08BDB /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		163AD9DA2710D12900D08BDB /* TextObservableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextObservableTextField.swift; sourceTree = "<group>"; };
+		163AD9DA2710D12900D08BDB /* UITextField+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Publisher.swift"; sourceTree = "<group>"; };
 		163CDC0C270F593D00724514 /* LoginScreenArchitecure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginScreenArchitecure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		163CDC0F270F593D00724514 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		163CDC11270F593D00724514 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		165326F62777A6750015EA5E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				163AD9DA2710D12900D08BDB /* TextObservableTextField.swift */,
+				163AD9DA2710D12900D08BDB /* UITextField+Publisher.swift */,
 				163CDC13270F593D00724514 /* LoginViewController.swift */,
 			);
 			path = View;
@@ -352,7 +352,7 @@
 				163AA0E42723680C00238AF4 /* Session.swift in Sources */,
 				163CDC1A270F593D00724514 /* LoginScreenArchitecure.xcdatamodeld in Sources */,
 				163AD9CE27102E6500D08BDB /* LoginViewModel.swift in Sources */,
-				163AD9DB2710D12900D08BDB /* TextObservableTextField.swift in Sources */,
+				163AD9DB2710D12900D08BDB /* UITextField+Publisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,8 +10,8 @@ import Foundation
 //https://file-examples-com.github.io/uploads/2017/10/file_example_PNG_500kB.png
 
 protocol LoginViewDataBinding {
-    var userName: String? { get set }
-    var password: String? { get set }
+    var userName: String { get set }
+    var password: String { get set }
     var role: String? { get set }
 }
 
@@ -26,22 +26,24 @@ protocol LoginViewVaildationBinding {
 }
 
 class LoginViewModel: LoginViewDataBinding, LoginViewVaildationBinding, ObservableObject {
+ 
     weak var coordinator: (LoginCoordinatorProtocol & AnyObject)?
     
     private let session: SessionProtocol?
     private let loginService: LoginServiceProtocol?
     
-    @Published var userName: String? {
+    var userName: String {
         didSet {
+            print("updated name == \(userName)")
             emailValidationAction?(validateEmail(text: userName))
         }
     }
-    @Published var password: String? {
+    var password: String {
         didSet {
             emailValidationAction?(validateEmail(text: password))
         }
     }
-    @Published var role: String? {
+    var role: String? {
         didSet {
             
         }
@@ -55,6 +57,8 @@ class LoginViewModel: LoginViewDataBinding, LoginViewVaildationBinding, Observab
          loginService: LoginServiceProtocol = LoginService()) {
         self.loginService = loginService
         self.session = session
+        self.userName = ""
+        self.password = ""
     }
 }
 
