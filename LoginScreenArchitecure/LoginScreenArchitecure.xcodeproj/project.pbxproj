@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,7 +26,6 @@
 		163CDC2A270F593F00724514 /* LoginScreenArchitecureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CDC29270F593F00724514 /* LoginScreenArchitecureTests.swift */; };
 		163CDC35270F593F00724514 /* LoginScreenArchitecureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CDC34270F593F00724514 /* LoginScreenArchitecureUITests.swift */; };
 		165326FE2777A8F40015EA5E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165326FD2777A8F40015EA5E /* Coordinator.swift */; };
-		16A7FE79277CC0B50017F507 /* CustomUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 16A7FE78277CC0B50017F507 /* CustomUIKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16A7FE79277CC0B50017F507 /* CustomUIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +226,6 @@
 			);
 			name = LoginScreenArchitecure;
 			packageProductDependencies = (
-				16A7FE78277CC0B50017F507 /* CustomUIKit */,
 			);
 			productName = LoginScreenArchitecure;
 			productReference = 163CDC0C270F593D00724514 /* LoginScreenArchitecure.app */;
@@ -302,7 +299,6 @@
 			);
 			mainGroup = 163CDC03270F593D00724514;
 			packageReferences = (
-				16A7FE77277CC0B50017F507 /* XCRemoteSwiftPackageReference "CustomUIKitComponents" */,
 			);
 			productRefGroup = 163CDC0D270F593D00724514 /* Products */;
 			projectDirPath = "";
@@ -687,25 +683,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		16A7FE77277CC0B50017F507 /* XCRemoteSwiftPackageReference "CustomUIKitComponents" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jagelooyadav/CustomUIKitComponents.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		16A7FE78277CC0B50017F507 /* CustomUIKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 16A7FE77277CC0B50017F507 /* XCRemoteSwiftPackageReference "CustomUIKitComponents" */;
-			productName = CustomUIKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		163CDC18270F593D00724514 /* LoginScreenArchitecure.xcdatamodeld */ = {
