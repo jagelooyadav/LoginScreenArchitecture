@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CustomUIKit",
+        "repositoryURL": "https://github.com/jagelooyadav/CustomUIKitComponents.git",
+        "state": {
+          "branch": "master",
+          "revision": "f8e2e07d1285f09fa41cbaf2f9ca45166e4c5226",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
